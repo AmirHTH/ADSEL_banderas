@@ -1,0 +1,62 @@
+body {	
+    background-color: blue; /* For browsers that do not support gradients */
+    background-image: radial-gradient(farthest-side at 95% 90%, white , lightblue, lightsteelblue ); /* Standard syntax (must be last) */
+}
+
+#escudo {
+    display: fixed;
+    margin-left: 80%;
+    width: 20%;
+	opacity: 0.1;
+    filter: alpha(opacity=10); /* For IE8 and earlier */
+}
+
+div.gallery {
+    border: 1px solid #ccc;	
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+	background-color: lightblue;
+
+}
+
+div.gallery img {
+    width: 90%;
+    height: auto;
+	 display: float;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
