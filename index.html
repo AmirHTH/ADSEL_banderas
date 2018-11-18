@@ -8,68 +8,97 @@
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 		
 	<title>Diversion con Banderas</title>
+
 </head>
 
-<body>
-<h1>Diversión con Banderas</h1>
-<img id="escudo" src="imgs/escudo.svg.png" />
+<body onload="login()">
+<div id="cabecera">
+		<button onclick="document.getElementById('id01').style.display='block'">Cambiar ID de usuario</button>
 
-<section>
-	<h2>El divertido Juego de las Banderas con MIW</h2>	
-	<progress value="1" max="7"></progress> 
-	<h3> ¿De que estado es esta bandera?</h3>
+	<img id="escudo" src="imgs/escudo.svg.png" />
 
-	
-	<div class="responsive">
-	  <div class="gallery">
+	<h1>Diversión con Banderas</h1>
 
-		  <img id="e1_pic"src="imgs/USA.svg.png">
+	<section>
+		<h2>El divertido Juego de las Banderas con MIW</h2>	
+		<progress value="1" max="7"></progress> 
+		<h3> ¿De que estado es esta bandera?</h3>
+</div>
 
-		<div id="e1_desc" class="desc">USA</div>
-	  </div>
-	</div>
-	
-	<div class="responsive">
-	  <div class="gallery">
 
-		  <img id="e2_pic"src="imgs/USA.svg.png">
+ <!-- The Modal -->
+ <div id="id01" class="modal">
+	 <span onclick="document.getElementById('id01').style.display='none'"
+ class="close" title="Close Modal">&times;</span>
+ 
+	 <!-- Modal Content -->
+	 <form class="modal-content animate" action="/action_page.php">
+		 <div class="imgcontainer">
+			 <img src="imgs/login.jpg" alt="Avatar" class="avatar">
+		 </div>
+ 
+		 <div class="container">
+				<h1>El divertido Juego de las Banderas con MIW</h1>	
 
-		<div id="e2_desc" class="desc">USA</div>
-	  </div>
-	</div>
-	
-	<div class="responsive">
-	  <div class="gallery">
+			 <label for="uname"><b>ID de Usuario</b></label>
+			 <input type="text" placeholder="Introducir ID de usuario" name="uname" required>
+ 
+			 <label for="psw"><b>Genero</b></label>
+			 <input type="text" placeholder="Indique su genero" name="psw" required>
 
-		  <img id="e3_pic"src="imgs/USA.svg.png">
+			 <label for="age"><b>Edad</b></label>
+			 <input type="text" placeholder="Indique edad" name="age" required>
+ 
+			 <button type="submit">Enviar</button>
 
-		<div id="e3_desc" class="desc">USA</div>
-	  </div>
-	</div>
-	<div class="responsive">
-	  <div class="gallery">
+		 </div>
+ 
+	 </form>
+ </div> 
+ 
+ <!-- END The Modal -->
 
-		  <img id="e4_pic"src="imgs/USA.svg.png">
 
-		<div id="e4_desc" class="desc">USA</div>
-	  </div>
-	</div>
-	<div class="responsive">
-	  <div class="gallery">
+	<div class="preguntas">
 
-		  <img id="e5_pic"src="imgs/USA.svg.png">
+		<div class="responsive">
+			<div class="gallery">
 
-		<div id="e5_desc" class="desc">USA</div>
-	  </div>
-	</div>
-	<div class="responsive">
-	  <div class="gallery">
+				<img id="e1_pic"src="imgs/USA.svg.png">
 
-		  <img id="e6_pic"src="imgs/USA.svg.png">
+			<div id="e1_desc" class="desc">USA</div>
+			</div>
+		</div>
+		
+		<div class="responsive">
+			<div class="gallery">
 
-		<div id="e6_desc" class="desc">USA</div>
-	  </div>
+				<img id="e2_pic"src="imgs/USA.svg.png">
+
+			<div id="e2_desc" class="desc">USA</div>
+			</div>
+		</div>
+		
+		<div class="responsive">
+			<div class="gallery">
+
+				<img id="e3_pic"src="imgs/USA.svg.png">
+
+			<div id="e3_desc" class="desc">USA</div>
+			</div>
+		</div>
+		<div class="responsive">
+			<div class="gallery">
+
+				<img id="e4_pic"src="imgs/USA.svg.png">
+
+			<div id="e4_desc" class="desc">USA</div>
+			</div>
+		</div>
 	</div>	
+</section>
+
+<section id="resultados">
 	
 	<div id ="ok">
 		<img id="img_ok" src="imgs/ok 1.gif" />
@@ -79,20 +108,21 @@
 		<img id="img_error" src="imgs/er ror.png" />
 	</div>
 
-
 </section>
 
-<section id="datosusr">
-<p id="idusr">0</p>
-<p id="aciertos">0</p>
-<p id="errores">0</p>
 
+<section id="datosusr">
+	<p id="idusr">Usuario: ID</p>
+	<p id="aciertos">Aciertos: 0</p>
+	<p id="errores">Fallos: 0</p>
 </section>
 
 </body>
 <footer>
-MIW: Asignatura: Entrega
-UO240753 (at) uniovi.es
+<p>MIW: Asignatura: Entrega</p>
+<p>UO240753 (at) uniovi.es</p>
 </footer>
 
 </html>
+
+		
