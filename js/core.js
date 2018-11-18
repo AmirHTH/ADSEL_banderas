@@ -5,10 +5,12 @@ var generoUSR ="";
 var edadUSR ="";
 var logPartida="";
 var horaInicio="";
+var horaFin="";
 var imagenes = new Array() ;
 var banderasSeleccionadas = new Array();
 var aciertos=0;
 var fallos=0;
+var tiempoEtapasCSV="";
 
 var elegido="";
 var turno=0;
@@ -16,15 +18,12 @@ var turno=0;
 
 function loguea (textoNuevo) {
     logPartida += (textoNuevo +"\n");
-
 }
-
 
 function log2csv () {
     let separador=",";
-    var csv=horaInicio+separador+idUSR+separador+generoUSR+separador+edadUSR
-    Console.log(csv)
-
+    var csv=horaInicio+separador+horaFin+separador+idUSR+separador+generoUSR+separador+edadUSR+separador+aciertos+separador+fallos+separador+tiempoEtapasCSV
+    Console.log(csv) 
 }
 
 function login() {
@@ -59,10 +58,13 @@ function initPartida() {
     console.log("iniciando partida");
     var classname = document.getElementsByClassName("gallery");
 
-    var myFunction = function() {
-        if (banderasSeleccionadas[elegido]===1) {
+    var myFunction = function(event) {
+        console.log("click en: "+event.target.id);
+        var urlIMG = document.getElementById(event.target.id).src;
+        console.log("url bandera: "+urlIMG);
+
+        if (urlIMG.includes(banderasSeleccionadas[elegido])) {
             aciertos++;
-            
             document.getElementById('aciertos').innerHTML = "Aciertos: "+aciertos;
 
 
@@ -77,6 +79,12 @@ function initPartida() {
             initRonda();
         } else {
             document.getElementById("preguntasBanderas").style.display = "none";
+            horaFin=Date.now();
+            loguea("******FIN partida******");
+            loguea(tiempoEtapasCSV);
+            loguea("jugador: "+idUSR+" ha acertad0: "+aciertos+" y fallado "+fallos
+             +" ha finalizado la partida a las "+ horaFin);
+             console.log(logPartida);
             alert("Gracias por participar y por favor recuerde rellenar la encuesta");
         }
     };
@@ -141,6 +149,15 @@ function initPartida() {
 }
 
 function initRonda() {
+
+if (tiempoEtapasCSV===""){
+    tiempoEtapasCSV += Date.now();
+}
+else {
+    tiempoEtapasCSV += ","+Date.now();
+}
+
+
 turno++;
 var j = 0
 var p = imagenes.length;
