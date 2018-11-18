@@ -6,6 +6,12 @@ var edadUSR ="";
 var logPartida="";
 var horaInicio="";
 var imagenes = new Array() ;
+var banderasSeleccionadas = new Array();
+var aciertos=0;
+var fallos=0;
+
+var elegido="";
+var turno=0;
 
 
 function loguea (textoNuevo) {
@@ -54,7 +60,25 @@ function initPartida() {
     var classname = document.getElementsByClassName("gallery");
 
     var myFunction = function() {
-            alert("FUNCIONA");
+        if (banderasSeleccionadas[elegido]===1) {
+            aciertos++;
+            
+            document.getElementById('aciertos').innerHTML = "Aciertos: "+aciertos;
+
+
+        } else {
+            fallos++;
+            document.getElementById('errores').innerHTML = "Errores: "+fallos;
+
+
+        }
+    
+        if (turno<7) {
+            initRonda();
+        } else {
+            document.getElementById("preguntasBanderas").style.display = "none";
+            alert("Gracias por participar y por favor recuerde rellenar la encuesta");
+        }
     };
 
     for (var i = 0; i < classname.length; i++) {
@@ -117,7 +141,7 @@ function initPartida() {
 }
 
 function initRonda() {
-    
+turno++;
 var j = 0
 var p = imagenes.length;
 var numImg1 = 0;
@@ -149,15 +173,42 @@ document.getElementById("e2_pic").src="banderas/"+imagenes[numImg2];
 document.getElementById("e3_pic").src="banderas/"+imagenes[numImg3];
 document.getElementById("e4_pic").src="banderas/"+imagenes[numImg4];
 
-    //elegir estado
-    //poner nombre estado
-    //poner bandera buena
-    //poner banderas malas
+banderasSeleccionadas[0]=imagenes[numImg1];
+banderasSeleccionadas[1]=imagenes[numImg2];
+banderasSeleccionadas[2]=imagenes[numImg3]
+banderasSeleccionadas[3]=imagenes[numImg4]
+
+
+
+elegido = Math.round(Math.random()*(4-1));
+txtbanderaBuena=banderasSeleccionadas[elegido].toUpperCase();
+txtbanderaBuena=txtbanderaBuena.substring(0, txtbanderaBuena.indexOf("."));
+
+var txtbanderaBuena = txtbanderaBuena.replace(/_/g, ' ');
+
+console.log(txtbanderaBuena);
+
+document.getElementById("progreso").value=turno;
+document.getElementById('estadoElegido').innerHTML = txtbanderaBuena;
+
+var para1 = document.createElement("p");
+var node = document.createTextNode("¿"+txtbanderaBuena+"?");
+para1.appendChild(node);
+var para2 = para1.cloneNode(true);
+var para3 = para1.cloneNode(true);
+var para4 = para1.cloneNode(true);
+
+var element1 = document.getElementById("e1_desc");
+var element2 = document.getElementById("e2_desc");
+var element3 = document.getElementById("e3_desc");
+var element4 = document.getElementById("e4_desc");
+
+element1.appendChild(para1);
+element2.appendChild(para2);
+element3.appendChild(para3);
+element4.appendChild(para4);
+
 }
 
-function compruebaGanador() {
-    //recoger el elemento clikado y comprobar si la imagen es la misma que la del estado seleccionado
-
-}
 
 
