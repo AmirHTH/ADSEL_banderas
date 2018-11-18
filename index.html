@@ -4,6 +4,9 @@
 	<meta charset="UTF-8">
 	<script src="js/core.js" />	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script >
+		$("#gallery").click(compruebaBandera());
+	</script>
 	
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 		
@@ -32,7 +35,7 @@
  class="close" title="Close Modal">&times;</span>
  
 	 <!-- Modal Content -->
-	 <form class="modal-content animate" action="/action_page.php">
+	 <div class="modal-content animate" >
 		 <div class="imgcontainer">
 			 <img src="imgs/login.jpg" alt="Avatar" class="avatar">
 		 </div>
@@ -41,19 +44,19 @@
 				<h1>El divertido Juego de las Banderas con MIW</h1>	
 
 			 <label for="uname"><b>ID de Usuario</b></label>
-			 <input type="text" placeholder="Introducir ID de usuario" name="uname" required>
+			 <input id="form_idusr"  type="text" placeholder="Introducir ID de usuario" name="uname" required>
  
 			 <label for="psw"><b>Genero</b></label>
-			 <input type="text" placeholder="Indique su genero" name="psw" required>
+			 <input id="form_genero"type="text" placeholder="Indique su genero" name="psw" required>
 
 			 <label for="age"><b>Edad</b></label>
-			 <input type="text" placeholder="Indique edad" name="age" required>
+			 <input id="form_edad" type="text" placeholder="Indique edad" name="age" required>
  
-			 <button type="submit">Enviar</button>
+			 <button onclick="guardarDatosUSR()">Enviar</button> 
 
 		 </div>
  
-	 </form>
+		</div>
  </div> 
  
  <!-- END The Modal -->
