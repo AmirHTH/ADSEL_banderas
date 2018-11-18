@@ -1,5 +1,3 @@
-
-
 var idUSR = "";
 var generoUSR ="";
 var edadUSR ="";
@@ -23,7 +21,7 @@ function loguea (textoNuevo) {
 function log2csv () {
     let separador=",";
     var csv=horaInicio+separador+horaFin+separador+idUSR+separador+generoUSR+separador+edadUSR+separador+aciertos+separador+fallos+separador+tiempoEtapasCSV
-    Console.log(csv) 
+    console.log(csv) 
 }
 
 function login() {
@@ -85,6 +83,8 @@ function initPartida() {
             loguea("jugador: "+idUSR+" ha acertad0: "+aciertos+" y fallado "+fallos
              +" ha finalizado la partida a las "+ horaFin);
              console.log(logPartida);
+             log2csv();
+
             alert("Gracias por participar y por favor recuerde rellenar la encuesta");
         }
     };
@@ -227,5 +227,29 @@ element4.appendChild(para4);
 
 }
 
+function reiniciar () {
+    idUSR = "";
+    generoUSR ="";
+    edadUSR ="";
+    logPartida="";
+    horaInicio="";
+    horaFin="";
+    imagenes = new Array() ;
+    banderasSeleccionadas = new Array();
+    aciertos=0;
+    fallos=0;
+    tiempoEtapasCSV="";
 
+    elegido="";
+    turno=0;
+
+    document.getElementById('aciertos').innerHTML = "Aciertos: "+aciertos;
+    document.getElementById('errores').innerHTML = "Errores: "+fallos;
+    document.getElementById("progreso").value=turno;
+    document.getElementById('estadoElegido').innerHTML = "";
+    document.getElementById("preguntasBanderas").style.display = "block";
+
+    login();
+
+}
 
