@@ -11,6 +11,7 @@ var banderasSeleccionadas = new Array();
 var aciertos=0;
 var fallos=0;
 var tiempoEtapasCSV="";
+let separador=",";
 
 
 var elegido="";
@@ -22,7 +23,7 @@ function loguea (textoNuevo) {
 }
 
 function log2csv () {
-    let separador=",";
+   
     var csv=horaInicio+separador+horaFin+separador+idUSR+separador+generoUSR+separador+edadUSR+separador+aciertos+separador+fallos+separador+tiempoEtapasCSV
     console.log(csv) 
     return csv;
@@ -66,7 +67,7 @@ function initPartida() {
         console.log("url bandera: "+urlIMG);
         muestraResultado();
 
-        loguea("url bandera que salio: "+urlIMG+" bandera buena: "+elegido +" banderas: "+ banderasSeleccionadas.values);
+        loguea("url bandera que salio: "+urlIMG+" bandera buena: "+elegido +" banderas: "+ banderasSeleccionadas.join(separador)+" bbb "+banderasSeleccionadas.values);
 
         if (urlIMG.includes(banderasSeleccionadas[elegido])) {
             aciertos++;
