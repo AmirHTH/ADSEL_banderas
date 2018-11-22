@@ -66,7 +66,7 @@ function initPartida() {
         console.log("url bandera: "+urlIMG);
         muestraResultado();
 
-        loguea("url bandera que salio: "+urlIMG+" bandera buena: "+elegido +" banderas: "+ banderasSeleccionadas.join(separador));
+        loguea("url bandera que salio: "+urlIMG+" bandera buena: "+elegido +" banderas: "+ banderasSeleccionadas.values);
 
         if (urlIMG.includes(banderasSeleccionadas[elegido])) {
             aciertos++;
