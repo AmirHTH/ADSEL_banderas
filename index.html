@@ -4,6 +4,12 @@
 	<meta charset="UTF-8">
 	<script src="js/core.js" />	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_A8yPgMG5shuw1qyAhwTwO");
+   })();
+</script>
 	
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 		
@@ -102,21 +108,55 @@
 <section id="resultados">
 	
 	<div id ="ok">
-		<img id="img_ok" src="imgs/ok1.gif" />
+	
 	</div>
 	
 	<div id ="error">
-		<img id="img_error" src="imgs/error.png" />
+
 	</div>
 
 </section>
 
+
+<section>
+
+	<!-- Trigger/Open The Modal 
+	<button id="myBtn">Open Modal</button>
+	-->
+	<!-- The Modal -->
+	<div id="myModal2" class="modal2">
+
+		<!-- Modal content -->
+		<div class="modal-content2">
+			<div id="idResultadoHeader" class="modal-header2">
+				<span class="close2">&times;</span>
+				<h2 id="txtResultadoHeader"></h2>
+			</div>
+			<div class="modal-body2">
+				<p>Tu respuesta es: </p>
+				<p id="txtResultado">.</p>
+				<img id="imgResultado" src="imgs/escudo.svg.png" />
+			</div>
+			<div class="modal-footer2">
+			</div>
+		</div>
+
+	</div>
+
+</section>
 
 <section id="datosusr">
 	<p id="idusr">Usuario: ID</p>
 	<p id="aciertos">Aciertos: 0</p>
 	<p id="errores">Fallos: 0</p>
 </section>
+
+<script>
+
+		var modal = document.getElementById('myModal2');
+		var span = document.getElementsByClassName("close2")[0];
+</script>
+
 
 </body>
 <footer>
