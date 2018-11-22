@@ -127,7 +127,7 @@ function initPartida() {
                 }, function(error) {
                    console.log('FAILED...', error);
                 });
-
+/*
                 var template_params = {
                     "reply_to": "amazin.travels.miw@gmail.com",
                     "from_name": "MIW",
@@ -138,7 +138,7 @@ function initPartida() {
                  var service_id = "default_service";
                  var template_id = "template_MgjD9QFt";
                  emailjs.send(service_id,template_id,template_params);
-
+*/
             alert("Gracias por participar y por favor recuerde rellenar la encuesta");
         }
     };
