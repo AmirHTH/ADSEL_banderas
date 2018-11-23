@@ -95,8 +95,8 @@ function initPartida() {
             document.getElementById("imgResultado").src="imgs/"+erroresIMG[numErrorNueva];
             document.getElementById('txtResultado').innerHTML = "ERROR :( ";
             document.getElementById('txtResultadoHeader').innerHTML = "ERROR :( ";
-            document.getElementById("myModal2").style.color = "red";
-            document.getElementById("myModal2").style.backgroundColor  = "DarkRed";
+            document.getElementById("myModal2").style.color = "red !important";
+            document.getElementById("myModal2").style.backgroundColor  = "DarkRed !important";
             document.getElementById("idResultadoHeader").style.backgroundColor  = "green";
 
 
@@ -297,10 +297,10 @@ var element2 = document.getElementById("e2_desc");
 var element3 = document.getElementById("e3_desc");
 var element4 = document.getElementById("e4_desc");
 
-element1.appendChild(para1);
-element2.appendChild(para2);
-element3.appendChild(para3);
-element4.appendChild(para4);
+//element1.appendChild(para1);
+//element2.appendChild(para2);
+//element3.appendChild(para3);
+//element4.appendChild(para4);
 
 }
 
