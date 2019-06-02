@@ -97,7 +97,7 @@ function initPartida() {
             document.getElementById('txtResultadoHeader').innerHTML = "ERROR :( ";
             document.getElementById("myModal2").style.color = "red !important";
             document.getElementById("myModal2").style.backgroundColor  = "DarkRed !important";
-            document.getElementById("idResultadoHeader").style.backgroundColor  = "green";
+            document.getElementById("idResultadoHeader").style.backgroundColor  = "Salmon";
 
 
         }
