@@ -81,9 +81,11 @@ function initPartida() {
             document.getElementById("imgResultado").src="imgs/"+aciertosIMG[numAciertoNueva];
             document.getElementById('txtResultado').innerHTML = "CORRECTO :) ";
             document.getElementById('txtResultadoHeader').innerHTML = "CORRECTO :) ";
-            document.getElementById("myModal2").style.color = "green";
+            document.getElementById("txtResultadoHeader").style.color = "DarkGreen";
+            document.getElementById("txtResultado").style.color = "Green";
+            document.getElementById("myModal2").style.color = "Green";
             document.getElementById("myModal2").style.backgroundColor   = "DarkGreen";
-            document.getElementById("idResultadoHeader").style.backgroundColor  = "green";    
+            document.getElementById("idResultadoHeader").style.backgroundColor  = "PaleGreen";    
 
 
         } else {
@@ -95,7 +97,9 @@ function initPartida() {
             document.getElementById("imgResultado").src="imgs/"+erroresIMG[numErrorNueva];
             document.getElementById('txtResultado').innerHTML = "ERROR :( ";
             document.getElementById('txtResultadoHeader').innerHTML = "ERROR :( ";
-            document.getElementById("myModal2").style.color = "red !important";
+            document.getElementById("txtResultadoHeader").style.color = "Red";
+            document.getElementById("txtResultado").style.color = "Red";
+            document.getElementById("myModal2").style.color = "Red";
             document.getElementById("myModal2").style.backgroundColor  = "DarkRed !important";
             document.getElementById("idResultadoHeader").style.backgroundColor  = "Salmon";
 
@@ -204,8 +208,16 @@ function initPartida() {
     aciertosIMG[2]="ok3.png";
     aciertosIMG[3]="ok4.jpg";
     aciertosIMG[4]="cooperSonrie.png";
-    aciertosIMG[5]="ok.jpg";
+    aciertosIMG[5]="bueno.gif";
     aciertosIMG[6]="ok6.jpg";
+    aciertosIMG[7]="bueno1.gif";
+    aciertosIMG[8]="bueno2.gif";
+    aciertosIMG[9]="bueno3.gif";
+    aciertosIMG[10]="bueno4.gif";
+    aciertosIMG[11]="bueno5.gif";
+    aciertosIMG[12]="bueno6.gif";
+    aciertosIMG[13]="bueno7.gif";
+    aciertosIMG[14]="bueno8.gif";
 
 
     erroresIMG[0]="error.png";
@@ -218,7 +230,17 @@ function initPartida() {
     erroresIMG[7]="error_6.gif";
     erroresIMG[8]="error1.jpg";
     erroresIMG[9]="error.png";
-    erroresIMG[9]="bazinga.jpg";
+    erroresIMG[10]="bazinga.jpg";
+    erroresIMG[11]="malo.gif";
+    erroresIMG[12]="malo1.gif";
+    erroresIMG[13]="malo2.gif";
+    erroresIMG[14]="malo3.gif";
+    erroresIMG[15]="malo4.gif";
+    erroresIMG[16]="malo5.gif";
+    erroresIMG[17]="malo6.gif";
+    erroresIMG[18]="malo7.gif";
+    erroresIMG[19]="malo8.gif";
+
 
 
 
