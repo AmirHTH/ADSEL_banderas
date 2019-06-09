@@ -1,3 +1,4 @@
+
 body {	
     font-size: 20px;
 
@@ -25,8 +26,15 @@ body {
 {
    /* width: 150px;
     width: 50%;*/
-    max-width: 50%;
-    height: auto;
+    max-height: 20%;
+    max-width: 20%;
+}
+#imgBanderaBuena
+{
+   /* width: 150px;
+    width: 50%;*/
+    max-height: 15%;
+    max-width: 15%;
 }
 
 .avatar {
@@ -249,4 +257,12 @@ footer {
 @keyframes fadeIn2 {
     from {opacity: 0} 
     to {opacity: 1}
+}
+
+#modal-footer2 {
+
+-webkit-text-decoration: darkturquoise solid underline;
+  text-decoration: darkturquoise solid underline;
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip: ink;
 }

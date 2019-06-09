@@ -79,13 +79,14 @@ function initPartida() {
             var numAciertoNueva = Math.round(Math.random()*(aciertoLargo-1));
             console.log(numAciertoNueva);
             document.getElementById("imgResultado").src="imgs/"+aciertosIMG[numAciertoNueva];
-            document.getElementById('txtResultado').innerHTML = "CORRECTO :) ";
+            document.getElementById('txtResultado').innerHTML = "CORRECTA :) ";
             document.getElementById('txtResultadoHeader').innerHTML = "CORRECTO :) ";
             document.getElementById("txtResultadoHeader").style.color = "DarkGreen";
             document.getElementById("txtResultado").style.color = "Green";
             document.getElementById("myModal2").style.color = "Green";
             document.getElementById("myModal2").style.backgroundColor   = "DarkGreen";
             document.getElementById("idResultadoHeader").style.backgroundColor  = "PaleGreen";    
+            document.getElementById("idModalBody2").style.backgroundColor  = "Aquamarine";    
 
 
         } else {
@@ -102,9 +103,13 @@ function initPartida() {
             document.getElementById("myModal2").style.color = "Red";
             document.getElementById("myModal2").style.backgroundColor  = "DarkRed !important";
             document.getElementById("idResultadoHeader").style.backgroundColor  = "Salmon";
+            document.getElementById("idModalBody2").style.backgroundColor  = "Pink";    
 
+            
 
         }
+        document.getElementById('txtBanderaBuena').innerHTML = "La bandera es de "+banderasSeleccionadas[elegido].slice(0,-3);
+        document.getElementById("imgBanderaBuena").src="banderas/"+banderasSeleccionadas[elegido];
     
         if (turno<7) {
             initRonda();
@@ -150,7 +155,6 @@ function initPartida() {
     for (var i = 0; i < classname.length; i++) {
             classname[i].addEventListener('click', myFunction, false);
     }
-
 
     imagenes[0] = "alabama.png"
     imagenes[1] = "alaska.png"
@@ -219,7 +223,6 @@ function initPartida() {
     aciertosIMG[13]="bueno7.gif";
     aciertosIMG[14]="bueno8.gif";
 
-
     erroresIMG[0]="error.png";
     erroresIMG[1]="error_2.png";
     erroresIMG[2]="error_3.png";
@@ -240,9 +243,6 @@ function initPartida() {
     erroresIMG[17]="malo6.gif";
     erroresIMG[18]="malo7.gif";
     erroresIMG[19]="malo8.gif";
-
-
-
 
     initRonda();
 }
