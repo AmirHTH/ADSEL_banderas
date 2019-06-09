@@ -79,10 +79,10 @@ function initPartida() {
             var numAciertoNueva = Math.round(Math.random()*(aciertoLargo-1));
             console.log(numAciertoNueva);
             document.getElementById("imgResultado").src="imgs/"+aciertosIMG[numAciertoNueva];
-            document.getElementById('txtResultado').innerHTML = "CORRECTA :) ";
+           // document.getElementById('txtResultado').innerHTML = "CORRECTA :) ";
             document.getElementById('txtResultadoHeader').innerHTML = "CORRECTO :) ";
             document.getElementById("txtResultadoHeader").style.color = "DarkGreen";
-            document.getElementById("txtResultado").style.color = "Green";
+            //document.getElementById("txtResultado").style.color = "Green";
             document.getElementById("myModal2").style.color = "Green";
             document.getElementById("myModal2").style.backgroundColor   = "DarkGreen";
             document.getElementById("idResultadoHeader").style.backgroundColor  = "PaleGreen";    
@@ -96,19 +96,19 @@ function initPartida() {
             var numErrorNueva = Math.round(Math.random()*(erroresLargo-1));
             console.log(numErrorNueva);
             document.getElementById("imgResultado").src="imgs/"+erroresIMG[numErrorNueva];
-            document.getElementById('txtResultado').innerHTML = "ERROR :( ";
+            //document.getElementById('txtResultado').innerHTML = "ERROR :( ";
             document.getElementById('txtResultadoHeader').innerHTML = "ERROR :( ";
             document.getElementById("txtResultadoHeader").style.color = "Red";
-            document.getElementById("txtResultado").style.color = "Red";
+           // document.getElementById("txtResultado").style.color = "Red";
             document.getElementById("myModal2").style.color = "Red";
-            document.getElementById("myModal2").style.backgroundColor  = "DarkRed !important";
+            document.getElementById("myModal2").style.backgroundColor  = "DarkRed";
             document.getElementById("idResultadoHeader").style.backgroundColor  = "Salmon";
             document.getElementById("idModalBody2").style.backgroundColor  = "Pink";    
 
             
 
         }
-        document.getElementById('txtBanderaBuena').innerHTML = "La bandera es de "+banderasSeleccionadas[elegido].slice(0,-3);
+        document.getElementById('txtBanderaBuena').innerHTML = "La bandera de "+banderasSeleccionadas[elegido].slice(0,-4)+ " es: ";
         document.getElementById("imgBanderaBuena").src="banderas/"+banderasSeleccionadas[elegido];
     
         if (turno<7) {
